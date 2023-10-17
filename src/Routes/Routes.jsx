@@ -5,6 +5,7 @@ import {
 import Root from "../Root/Root";
 import ErrorElement from "../Component/ErrorElement";
 import Home from "../pages/Home/Home";
+import AddProduct from "../pages/addproduct/AddProduct";
 
 
 const router = createBrowserRouter([
@@ -16,8 +17,11 @@ const router = createBrowserRouter([
 {
 path:'/',
 element: <Home></Home>
-}
-
+},
+{
+  path:'/addproduct',
+  element: <AddProduct></AddProduct>
+},
 
   ]
   },
