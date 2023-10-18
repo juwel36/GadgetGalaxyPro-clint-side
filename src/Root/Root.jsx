@@ -6,7 +6,9 @@ const Root = () => {
     <div>
       
       <Navbar> </Navbar>
+<div className="bg-black">
 <Outlet></Outlet>
+</div>
     </div>
   );
 };

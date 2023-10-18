@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import img1 from '../assets/no-products-removebg-preview.png'
-import {  FaDollarSign } from 'react-icons/fa';
+import {  FaDollarSign} from 'react-icons/fa';
 import SimpleSlider from './Slider';
 
 const Branddetails = () => {
@@ -17,6 +17,10 @@ const Branddetails = () => {
       });
   }, [brandname]);
 
+
+
+
+
   return (
     <div className='bg-black pb-10 '>
 
@@ -26,7 +30,7 @@ const Branddetails = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         {products.length > 1 ? (
           products.map((product) => (
-            <div key={product._id} className="card bg-base-100 shadow-xl">
+            <div key={product._id} className="card bg-base-200 shadow-xl">
               <figure>
                 <img className="w-72 h-72" src={product.image} alt="image" />
               </figure>
@@ -39,7 +43,7 @@ const Branddetails = () => {
                 </div>
                 <div className="card-actions justify-center">
                   <Link to={`/singleDeteils/${product._id}`}><button className="btn bg-emerald-800 text-white">Details</button></Link>
-                  <button className="btn bg-red-800 text-white">Update</button>
+                  <Link to={`/update/${product._id}`}><button className="btn bg-red-800 text-white">Update</button></Link>
                  
                 </div>
               </div>

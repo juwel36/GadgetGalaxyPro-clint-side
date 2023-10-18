@@ -10,6 +10,7 @@ import Login from "../pages/Login/Login";
 import Regestraion from "../pages/Regestraion/Regestraion";
 import Branddetails from "../Component/Branddetails";
 import SingleDetails from "../Component/SingleDetails";
+import Update from "../pages/Update";
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,11 @@ loader: ()=> fetch('http://localhost:5000/products')
 {
 path: '/singleDeteils/:id',
 element: <SingleDetails></SingleDetails>,
+loader:({params})=> fetch(`http://localhost:5000/products/${params.id}`)
+},
+{
+path: '/update/:id',
+element:<Update></Update> ,
 loader:({params})=> fetch(`http://localhost:5000/products/${params.id}`)
 }
 
