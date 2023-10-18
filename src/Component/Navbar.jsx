@@ -1,8 +1,21 @@
 import { Link, NavLink } from "react-router-dom";
 import img1 from '../assets/Add a heading.png'
+import { useContext } from "react";
+import { AuthContext } from "../authprovider/AuthProvider";
 
 const Navbar = () => {
 
+  const {user,logOut}=useContext(AuthContext)
+
+  const loggedOut = () => {
+    logOut()
+      .then(() => {
+        console.log("Logged out successfully");
+      })
+      .catch(error => {
+        console.log("Error logging out:", error);
+      });
+  };
 
 
   const category = (
@@ -37,7 +50,21 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link to='/login'><button>sign in</button></Link>
+  {
+  user ? <p className="text-white"> {user.displayName}</p> : ''
+}
+
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <div className="w-10 rounded-full">
+
+            {user && user.photoURL ? <img src={user.photoURL} alt="User Profile" /> : "" }
+            </div>
+          </label>
+  {user ? (
+            <button onClick={loggedOut} className="btn bg-slate-500 text-white border-none" >Sign Out</button>
+          ) : (
+            <NavLink to='/login' className="btn bg-slate-700 text-white border-none px-6">Log in</NavLink>
+          )}
   </div>
 </div>
       

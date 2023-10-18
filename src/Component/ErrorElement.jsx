@@ -1,4 +1,4 @@
-
+import img from '../assets/—Pngtree—internet network warning 404 error_7259417.png'
 
 const ErrorElement = () => {
   const handleback =()=> {
@@ -8,11 +8,16 @@ const ErrorElement = () => {
 
   return (
     <div>
+<div className='flex items-center justify-center'>
+  <img className='w-96' src={img} alt="" />
+</div>
+
         <div>
-      <h1 className="text-center font-bold text-3xl mt-16">Uppppps !</h1>
+
+      <h1 className="text-center font-bold text-3xl ">Uppppps !</h1>
       <p className="text-center  mt-9">Somthing Wrong</p>
       <div className="flex items-center justify-center mt-9">
-        <button onClick={handleback} >Go Back</button>
+        <button className='btn bg-red-500 text-black' onClick={handleback} >Go Back</button>
       </div>
     </div>
     </div>

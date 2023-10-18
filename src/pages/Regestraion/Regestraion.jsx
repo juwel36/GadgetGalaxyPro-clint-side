@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 
 const Regestraion = () => {
 
-  const {createuser,googleAuth} =useContext(AuthContext)
+  const {createuser,googleAuth,updateprofile} =useContext(AuthContext)
   const [showerror,setshowerror]=useState(null)
   const navigate=useNavigate()
 
@@ -44,14 +44,18 @@ const Regestraion = () => {
   
   createuser(email,password)
   .then(res=> {
-  console.log(res.user);
-  Swal.fire({
-    position: 'top-end',
-    icon: 'success',
-    title: ' Successfully Regestered',
-    showConfirmButton: false,
-    timer: 1500
-  })
+    updateprofile(name,image)
+    .then(()=>{
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: ' Successfully Regestered',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    
+      navigate('/')
+    })
 
   })
   .catch(error=>{

@@ -10,6 +10,7 @@ const product = e.target.product.value;
 const price = e.target.price.value;
 const shortdescription = e.target.shortdescription.value;
 const rating = e.target.rating.value;
+const brandimage = e.target.brandimage.value;
 const userdetails = {
   image,
   name,
@@ -18,6 +19,7 @@ const userdetails = {
   price,
   shortdescription,
   rating,
+  brandimage
 };
 
 
@@ -49,13 +51,13 @@ fetch('http://localhost:5000/products',{
           <label className="label">
             <span className="label-text">Image</span>
           </label>
-          <input type="text" name="image" placeholder="Image URL" className="input input-bordered" required />
+          <input type="text" name="image" placeholder="Image URL" className="input input-bordered"  />
         </div>
         <div className="form-control w-full">
           <label className="label">
             <span className="label-text">Name</span>
           </label>
-          <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
+          <input type="text" name="name" placeholder="Name" className="input input-bordered"  />
         </div>
 </div>
 <div className="flex flex-col md:flex-row lg:flex-row gap-6">
@@ -63,13 +65,13 @@ fetch('http://localhost:5000/products',{
           <label className="label">
             <span className="label-text">Brand Name</span>
           </label>
-          <input type="text" name="brandname" placeholder="Brand Name" className="input input-bordered" required />
+          <input type="text" name="brandname" placeholder="Brand Name" className="input input-bordered"  />
         </div>
         <div className="form-control w-full">
           <label className="label">
             <span className="label-text">products</span>
           </label>
-          <input type="text" name="product" placeholder="products" className="input input-bordered" required />
+          <input type="text" name="product" placeholder="products" className="input input-bordered"  />
         </div>
 </div>
 <div className="flex flex-col md:flex-row lg:flex-row gap-6">
@@ -77,21 +79,28 @@ fetch('http://localhost:5000/products',{
           <label className="label">
             <span className="label-text">Price</span>
           </label>
-          <input type="text" name="price" placeholder="Price" className="input input-bordered" required />
+          <input type="text" name="price" placeholder="Price" className="input input-bordered" />
         </div>
         <div className="form-control w-full">
           <label className="label">
             <span className="label-text">Short description</span>
           </label>
-          <input type="text" name="shortdescription" placeholder="Short description" className="input input-bordered" required />
+          <input type="text" name="shortdescription" placeholder="Short description" className="input input-bordered"  />
         </div>
 </div>
 <div className="flex flex-col md:flex-row lg:flex-row gap-6">
-<div className="form-control w-1/2">
+
+<div className="form-control w-full">
           <label className="label">
             <span className="label-text">Rating</span>
           </label>
-          <input type="text" name="rating" placeholder="Rating" className="input input-bordered" required />
+          <input type="text" name="rating" placeholder="Rating" className="input input-bordered"  />
+        </div>
+<div className="form-control w-full">
+          <label className="label">
+            <span className="label-text">Brand Image</span>
+          </label>
+          <input type="text" name="brandimage" placeholder="Brand image url" className="input input-bordered"  />
         </div>
         
 </div>
