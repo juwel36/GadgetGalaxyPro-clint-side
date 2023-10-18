@@ -8,6 +8,7 @@ import Home from "../pages/Home/Home";
 import AddProduct from "../pages/addproduct/AddProduct";
 import Login from "../pages/Login/Login";
 import Regestraion from "../pages/Regestraion/Regestraion";
+import Branddetails from "../Component/Branddetails";
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,11 @@ loader: ()=> fetch('http://localhost:5000/products')
   path:'/regestraion',
   element: <Regestraion></Regestraion> 
 },
+{
+  path: '/seedetails/:brandname',
+  element: <Branddetails />,
+}
+
 
 
 

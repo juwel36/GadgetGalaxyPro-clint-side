@@ -6,11 +6,12 @@ import BrandsName from "../../Component/BrandsName";
 
 const Home = () => {
   const products=useLoaderData()
+  const brandCards = products.slice(0, 6);
 
   return (
-    <div>
+    <div className="bg-gray-900">
       <Banner></Banner>
-<BrandsName card={products}></BrandsName>
+<BrandsName card={brandCards}></BrandsName>
 <Footer></Footer>
     </div>
   );
