@@ -40,7 +40,7 @@ const Branddetails = () => {
                 <div className="card-actions justify-center">
                   <Link to={`/singleDeteils/${product._id}`}><button className="btn bg-emerald-800 text-white">Details</button></Link>
                   <button className="btn bg-red-800 text-white">Update</button>
-                  <button className="btn btn-primary">Add to Cart</button>
+                 
                 </div>
               </div>
             </div>
