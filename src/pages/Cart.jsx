@@ -1,8 +1,9 @@
-// import  { useState, useEffect } from 'react';
+
 import { useState } from 'react';
 import { FaDollarSign } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+
 
 
 const Cart = () => {
@@ -13,45 +14,27 @@ const [cartItems,setcartitems]=useState(cartdetails)
 
 
 
-// const handleremove = (id) =>{
-//   console.log(id);
+const handleremove = (id) =>{
+  console.log(id);
 
+ 
+fetch(`http://localhost:5000/cart/${id}`,{
+method:'DELETE',
+})
+.then(res=> res.json())
+.then(data=>{
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: ' Delete succesfully',
+    showConfirmButton: false,
+    timer: 2000
+  })
+  console.log(data);
 
-  const handleremove = (id) => {
-    fetch(`http://localhost:5000/cart/${id}`, {
-      method: 'DELETE',
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        // Assuming the server responds with a success message upon deletion
-        // Update your cartItems state by filtering out the deleted item
-        console.log(data);
-        if (data.success) {
-          setcartitems((prevItems) => prevItems.filter((item) => item.id !== id));
-        }
-      })
-      .catch((error) => {
-        console.error('Error deleting item:', error);
-      });
-  };
-  
-// fetch(`http://localhost:5000/cart/${id}`,{
-// method:'DELETE',
-// })
-// .then(res=> res.json())
-// .then(data=>{
-//   // Swal.fire({
-//   //   position: 'top-end',
-//   //   icon: 'success',
-//   //   title: ' Delete succesfully',
-//   //   showConfirmButton: false,
-//   //   timer: 2000
-//   // })
-//   console.log(data);
-
-// // setcartitems((prevUser) => prevUser.filter((item) => item._id !== _id));
-// })
-// }
+setcartitems((prevUser) => prevUser.filter((item) => item._id !== _id));
+})
+}
 
   return (
     <div>
