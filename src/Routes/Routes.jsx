@@ -12,6 +12,7 @@ import Branddetails from "../Component/Branddetails";
 import SingleDetails from "../Component/SingleDetails";
 import Update from "../pages/Update";
 import Cart from "../pages/Cart";
+import PrivetRoute from "../PrivetRoute/PrivetRoute";
 
 
 
@@ -28,7 +29,7 @@ loader: ()=> fetch('http://localhost:5000/products')
 },
 {
   path:'/addproduct',
-  element: <AddProduct></AddProduct>
+  element: <PrivetRoute><AddProduct></AddProduct></PrivetRoute>
 },
 {
   path:'/login',
@@ -45,24 +46,20 @@ loader: ()=> fetch('http://localhost:5000/products')
 ,
 {
 path: '/singleDeteils/:id',
-element: <SingleDetails></SingleDetails>,
+element:<PrivetRoute> <SingleDetails></SingleDetails></PrivetRoute>,
 loader:({params})=> fetch(`http://localhost:5000/products/${params.id}`)
 },
 {
 path: '/update/:id',
-element:<Update></Update> ,
+element:<PrivetRoute><Update></Update></PrivetRoute> ,
 loader:({params})=> fetch(`http://localhost:5000/products/${params.id}`)
 },
 {
   path: '/addcart',
-  element: <Cart></Cart>,
+  element: <PrivetRoute><Cart></Cart></PrivetRoute>,
   loader: ()=> fetch('http://localhost:5000/cart')
 },
-// {
-//   path: '/cartd/:d',
-//   element: <Extra></Extra>,
-//   loader: ({params})=> fetch(`http://localhost:5000/cart/${params.id}`)
-// }
+
 
 
 

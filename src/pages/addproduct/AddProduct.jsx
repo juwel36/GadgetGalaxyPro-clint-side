@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 const AddProduct = () => {
 
@@ -34,7 +35,14 @@ fetch('http://localhost:5000/products',{
 .then(res=> res.json())
 .then(data=>{
   console.log(data);
-  alert('added suceessfully')
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: ' added suceessfully',
+    showConfirmButton: false,
+    timer: 1500
+  })
+ e.target.reset()
 })
 
 
@@ -44,7 +52,7 @@ fetch('http://localhost:5000/products',{
 
 
   return (
-    <div className="bg-black lg:h-[86vh] pt-10">
+    <div className="bg-black lg:h-[86vh] max-w-5xl mx-auto pt-10">
       <form onSubmit={handleaddProduct}>
 <div className="flex flex-col md:flex-row lg:flex-row gap-6">
 <div className="form-control w-full">

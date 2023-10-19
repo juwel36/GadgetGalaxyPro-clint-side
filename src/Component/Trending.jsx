@@ -17,7 +17,7 @@ const Trending = () => {
     <div>
 <p className="text-5xl font-mono text-red-600 text-center p-10"> Trending Products </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-black">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
         {data ? (
           data.map(item => (
             <div className="border flex flex-col items-center bg-slate-50 p-3 rounded-md text-black" key={item._id}>

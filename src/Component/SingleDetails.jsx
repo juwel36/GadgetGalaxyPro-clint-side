@@ -39,7 +39,7 @@ const {image,
 
   return (
    
-   <div className="flex flex-col md:flex-col lg:flex-row items-center  bg-slate-900 h-[86vh]">
+   <div className="flex flex-col md:flex-col lg:flex-row items-center  bg-slate-900 h-[86vh] ">
 
 <div className="lg:w-1/2">
 <img className="w-96 pl-2 lg:pl-28 mt-20 " src={image} alt="" />

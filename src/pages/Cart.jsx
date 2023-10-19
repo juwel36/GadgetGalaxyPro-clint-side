@@ -1,9 +1,9 @@
 
 import { useState } from 'react';
 import { FaDollarSign } from 'react-icons/fa';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
-
+import Rating from 'react-rating-stars-component'; 
 
 
 const Cart = () => {
@@ -60,7 +60,13 @@ setcartitems((prevUser) => prevUser.filter((item) => item._id !== id));
       {item.price} <FaDollarSign></FaDollarSign>
     </p>
     <p className="block font-sans text-base antialiased font-normal leading-relaxed text-gray-700 flex items-center">
-     Ratting: {item.rating} 
+    <Rating
+                    count={5}
+                    value={item.rating} 
+                    size={24}
+                    activeColor="#ffd700"
+                    edit={false} 
+                  />
     </p>
     <a className="inline-block" href="#">
     

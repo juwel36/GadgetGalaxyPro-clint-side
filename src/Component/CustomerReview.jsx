@@ -15,6 +15,8 @@ const CustomerReview = () => {
   }, []);
 
 
+  
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -25,19 +27,19 @@ const CustomerReview = () => {
   };
 
   return (
-    <div >
-      <p className="text-4xl text-red-600 py-10 text-center"> Our Good Customers</p>
+    <div className="p-8 lg:p-0" >
+      <p className="text-4xl text-red-600 py-10 text-center "> Our Good Customers</p>
       {data.length > 0 && (
         <Slider {...sliderSettings}>
           {data.map((review) => (
-            <div className="w-24 h-64 p-6  flex flex-col justify-center items-center rounded-2xl bg-gray-900" key={review.id}>
+            <div className="w-24 h-64 lg:p-6  flex  flex-col justify-center items-center rounded-2xl bg-gray-900" key={review.id}>
               <div className="flex justify-center">  <img className="rounded-full w-16" src={review.image} alt="" />
               </div>           
                <div className="flex flex-col items-center justify-center">
                 
                 <h2 className="text-xl text-red-600 font-semibold ">{review.name}</h2>
-                <p>{review.short_review}</p>
-                <p className="text-sm pt-2"> {review.date}</p>
+                <p className="text-white">{review.short_review}</p>
+                <p className="text-sm pt-2 text-white"> {review.date}</p>
                 
               </div>
             </div>

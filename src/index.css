@@ -2,16 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* styles.css */
+
 
 /* Light theme */
 .light {
   background-color: #fff;
-  color: #333;
+  color: #1a1919;
 }
 
 /* Dark theme */
 .dark {
-  background-color: #333;
+  background-color: #141414;
   color: #fff;
 }
