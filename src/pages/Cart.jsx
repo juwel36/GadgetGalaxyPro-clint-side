@@ -32,12 +32,12 @@ method:'DELETE',
   })
   console.log(data);
 
-setcartitems((prevUser) => prevUser.filter((item) => item._id !== _id));
+setcartitems((prevUser) => prevUser.filter((item) => item._id !== id));
 })
 }
 
   return (
-    <div>
+    <div className='max-w-5xl mx-auto'>
       <h2 className='text-3xl py-6 text-red-500'>Cart Contents</h2>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6'>
         {cartItems.map((item, index) => (
@@ -63,7 +63,7 @@ setcartitems((prevUser) => prevUser.filter((item) => item._id !== _id));
      Ratting: {item.rating} 
     </p>
     <a className="inline-block" href="#">
-      <Link to={`/cart/${item._id}`}><button className='btn'> X </button></Link>
+    
       <button 
     onClick={()=>handleremove(item._id)}
         className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-red-600 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
