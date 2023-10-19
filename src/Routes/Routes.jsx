@@ -11,6 +11,8 @@ import Regestraion from "../pages/Regestraion/Regestraion";
 import Branddetails from "../Component/Branddetails";
 import SingleDetails from "../Component/SingleDetails";
 import Update from "../pages/Update";
+import Cart from "../pages/Cart";
+
 
 
 const router = createBrowserRouter([
@@ -50,7 +52,17 @@ loader:({params})=> fetch(`http://localhost:5000/products/${params.id}`)
 path: '/update/:id',
 element:<Update></Update> ,
 loader:({params})=> fetch(`http://localhost:5000/products/${params.id}`)
-}
+},
+{
+  path: '/addcart',
+  element: <Cart></Cart>,
+  loader: ()=> fetch('http://localhost:5000/cart')
+},
+// {
+//   path: '/cartd/:d',
+//   element: <Extra></Extra>,
+//   loader: ({params})=> fetch(`http://localhost:5000/cart/${params.id}`)
+// }
 
 
 

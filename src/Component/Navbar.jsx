@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import img1 from '../assets/Add a heading.png'
 import { useContext } from "react";
 import { AuthContext } from "../authprovider/AuthProvider";
@@ -22,7 +22,7 @@ const Navbar = () => {
     <>
       <li> <NavLink to='/'>Home</NavLink> </li>
       <li> <NavLink to='/addproduct'>Add Product</NavLink> </li>
-      <li> <NavLink to='/cart'>My Cart</NavLink> </li>
+      <li> <NavLink to='/addcart'>My Cart</NavLink> </li>
     </>
   )
 

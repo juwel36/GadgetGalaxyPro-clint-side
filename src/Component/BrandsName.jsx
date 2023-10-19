@@ -13,7 +13,7 @@ const BrandsName = ({card}) => {
 
 
   return (
-    <div>
+    <div className="bg-black">
       <p className="text-5xl text-red-600 font-mono my-10 text-center"> Top Brands</p>
       <div className="grid grid-cols-2  lg:grid-cols-3 gap-4" >
         {
