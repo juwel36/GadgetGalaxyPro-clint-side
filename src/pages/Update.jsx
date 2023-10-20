@@ -20,7 +20,7 @@ const userdetails = {image,name,brandname,product,price,rating};
 console.log(userdetails);
 
  
-fetch(`http://localhost:5000/products/${_id}`,{
+fetch(`https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/products/${_id}`,{
   method:'PUT',
   headers:{
     'content-type':'application/json'

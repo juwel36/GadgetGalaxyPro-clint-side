@@ -10,7 +10,7 @@ const Branddetails = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/brand/${brandname}`)
+    fetch(`https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/products/brand/${brandname}`)
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => {
@@ -24,7 +24,7 @@ const Branddetails = () => {
 
       <h1 className="text-3xl py-5 text-red-500">Products by {brandname}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        {products.length > 0 ? (
+        {products.length > 1 ? (
           products.map((product) => (
             <div key={product.id} className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">

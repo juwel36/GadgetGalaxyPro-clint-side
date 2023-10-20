@@ -1,6 +1,6 @@
 import img1 from '../assets/Picsart_23-10-18_17-19-42-799.jpg';
 import img2 from '../assets/Picsart_23-10-18_17-23-36-237.jpg';
-import img3 from '../assets/Picsart_23-10-18_17-24-34-090.jpg';
+import img3 from '../assets/p2.jpg';
 
 const Slider = () => {
   return (

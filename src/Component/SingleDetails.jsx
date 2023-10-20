@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 const SingleDetails = () => {
   const navigate=useNavigate()
 const singledata=useLoaderData()
+
 const {image,
   name,
   brandname,
@@ -14,7 +15,7 @@ const {image,
   }=singledata
 
   const handleAddToCart = async () => {
-    const response = await fetch('http://localhost:5000/cart', {
+    const response = await fetch('https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

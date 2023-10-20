@@ -18,7 +18,7 @@ const handleremove = (id) =>{
   console.log(id);
 
  
-fetch(`http://localhost:5000/cart/${id}`,{
+fetch(`https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/cart/${id}`,{
 method:'DELETE',
 })
 .then(res=> res.json())

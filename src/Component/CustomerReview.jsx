@@ -7,7 +7,7 @@ const CustomerReview = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/review')
+    fetch('https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/review')
       .then((res) => res.json())
       .then((result) => {
         setData(result);
@@ -28,7 +28,7 @@ const CustomerReview = () => {
 
   return (
     <div className="p-8 lg:p-0" >
-      <p className="text-4xl text-red-600 py-10 text-center "> Our Good Customers</p>
+      <p className="text-4xl text-red-600 py-16 text-center "> Customers Review</p>
       {data.length > 0 && (
         <Slider {...sliderSettings}>
           {data.map((review) => (

@@ -6,7 +6,7 @@ const Trending = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/trending')
+    fetch('https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/trending')
       .then((res) => res.json())
       .then((result) => {
         setData(result);
@@ -15,7 +15,7 @@ const Trending = () => {
 
   return (
     <div>
-<p className="text-5xl font-mono text-red-600 text-center p-10"> Trending Products </p>
+<p className="text-5xl font-mono py-16 text-red-600 text-center p-10"> Trending Products </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
         {data ? (
