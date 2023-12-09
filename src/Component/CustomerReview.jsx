@@ -7,7 +7,7 @@ const CustomerReview = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/review')
+    fetch('https://gadget-galaxy-pro-server-side-ophfrrsrz-ag-juwels-projects.vercel.app/review')
       .then((res) => res.json())
       .then((result) => {
         setData(result);

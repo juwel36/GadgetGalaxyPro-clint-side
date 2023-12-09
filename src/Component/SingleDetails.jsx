@@ -15,12 +15,14 @@ const {image,
   }=singledata
 
   const handleAddToCart = async () => {
-    const response = await fetch('https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/cart', {
+    const mycart={...singledata}
+    delete mycart._id
+    const response = await fetch('https://gadget-galaxy-pro-server-side-ophfrrsrz-ag-juwels-projects.vercel.app/cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(singledata),
+      body: JSON.stringify(mycart),
     });
     
     if (response.ok) {

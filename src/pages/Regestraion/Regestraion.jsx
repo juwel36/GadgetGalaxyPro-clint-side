@@ -144,6 +144,37 @@ const Regestraion = () => {
     </div>
   </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// log in code.....,,,
+
+
+
   );
 };
 

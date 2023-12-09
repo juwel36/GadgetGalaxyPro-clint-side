@@ -24,7 +24,7 @@ const userdetails = {
 };
 
 
-fetch('https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/products',{
+fetch('https://gadget-galaxy-pro-server-side-ophfrrsrz-ag-juwels-projects.vercel.app/products',{
   method:'POST',
   headers:{
     'content-type':'application/json'

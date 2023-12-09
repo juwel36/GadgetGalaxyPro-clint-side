@@ -25,7 +25,7 @@ const router = createBrowserRouter([
 {
 path:'/',
 element: <Home></Home>,
-loader: ()=> fetch('https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/products')
+loader: ()=> fetch('https://gadget-galaxy-pro-server-side-ophfrrsrz-ag-juwels-projects.vercel.app/products')
 
 },
 {
@@ -48,17 +48,17 @@ loader: ()=> fetch('https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-pr
 {
 path: '/singleDeteils/:id',
 element:<PrivetRoute> <SingleDetails></SingleDetails></PrivetRoute>,
-loader:({params})=> fetch(`https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/products/${params.id}`)
+loader:({params})=> fetch(`https://gadget-galaxy-pro-server-side-ophfrrsrz-ag-juwels-projects.vercel.app/products/${params.id}`)
 },
 {
 path: '/update/:id',
 element:<PrivetRoute><Update></Update></PrivetRoute> ,
-loader:({params})=> fetch(`https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/products/${params.id}`)
+loader:({params})=> fetch(`https://gadget-galaxy-pro-server-side-ophfrrsrz-ag-juwels-projects.vercel.app/products/${params.id}`)
 },
 {
   path: '/addcart',
   element: <PrivetRoute><Cart></Cart></PrivetRoute>,
-  loader: ()=> fetch('https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/cart')
+  loader: ()=> fetch('https://gadget-galaxy-pro-server-side-ophfrrsrz-ag-juwels-projects.vercel.app/cart')
 },
 
 

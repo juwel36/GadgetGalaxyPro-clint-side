@@ -10,7 +10,7 @@ const Branddetails = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(`https://gadget-galaxy-pro-server-side-1sp6al515-ag-juwels-projects.vercel.app/products/brand/${brandname}`)
+    fetch(`https://gadget-galaxy-pro-server-side-ophfrrsrz-ag-juwels-projects.vercel.app/products/brand/${brandname}`)
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => {
